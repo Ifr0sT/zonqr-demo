@@ -30,22 +30,43 @@
       </div>
       <div class="categories" id="categories"></div>
       <span class="result-count" id="result-count"></span>
+      <button type="button" class="loc-btn" id="btn-locate">Usar mi ubicación</button>
     </div>
+    <div class="filters-bar" id="filters-bar">
+      <select id="f-dist"><option value="0">Cualquier distancia</option><option value="300">Hasta 300 m</option><option value="500">Hasta 500 m</option><option value="1000">Hasta 1 km</option><option value="2000">Hasta 2 km</option></select>
+      <select id="f-rating"><option value="0">Cualquier rating</option><option value="4">★ 4 o más</option><option value="4.5">★ 4.5 o más</option></select>
+      <select id="f-sort"><option value="near">Más cerca</option><option value="rating">Mejor rating</option><option value="name">A–Z</option></select>
+      <button type="button" class="filter-chip" data-filter="open">Abiertos</button>
+      <button type="button" class="filter-chip" data-filter="feat">Destacados</button>
+      <button type="button" class="filter-chip" data-filter="promo">Con promo</button>
+    </div>
+    <div class="nearest-bar" id="nearest-bar" hidden></div>
     <div class="list-view" id="list-view"></div>
     <div class="map-view" id="map-view">
       <div id="map-loading" class="map-loading">Cargando mapa…</div>
       <div id="map"></div>
+      <div class="map-tools">
+        <button type="button" id="map-me">Mi ubicación</button>
+        <button type="button" id="map-near">Más cercano</button>
+        <button type="button" id="map-all">Ver todos</button>
+      </div>
     </div>
   </main>
   <footer class="app-footer">
-    <a href="promo.html">¿Quieres ZonQR en tu zona?</a><span class="sep">·</span><a href="privacidad.html">Privacidad</a>
+    <a href="promo.html">¿Quieres ZonQR en tu zona?</a>
+    <span class="sep">·</span>
+    <a href="admin.html">Admin</a>
+    <span class="sep">·</span>
+    <a href="privacidad.html">Privacidad</a>
   </footer>
   <div class="modal-overlay" id="modal-overlay"><div class="modal" id="modal-content"></div></div>
+  <div class="toast" id="toast"></div>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script src="js/config.js"></script>
-  <script src="js/data1.js"></script>
-  <script src="js/data2.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/data-more.js"></script>
   <script src="js/storage.js"></script>
+  <script src="js/geo.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
